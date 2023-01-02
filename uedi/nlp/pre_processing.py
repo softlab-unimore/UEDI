@@ -315,17 +315,17 @@ class TextPreparation(object):
             if not isinstance(token, str):
                 raise TypeError("Wrong data type for word_tokens elements. Only string data type is allowed.")
 
-        lemma_words = []
+            lemma_words = []
 
-        wordnet_lemmatizer = WordNetLemmatizer()
+            wordnet_lemmatizer = WordNetLemmatizer()
 
-        for w in word_tokens:
-            word1 = wordnet_lemmatizer.lemmatize(w, pos="n")
-            word2 = wordnet_lemmatizer.lemmatize(word1, pos="v")
-            word3 = wordnet_lemmatizer.lemmatize(word2, pos=("a"))
-            lemma_words.append(word3)
+            for w in word_tokens:
+                word1 = wordnet_lemmatizer.lemmatize(w, pos="n")
+                word2 = wordnet_lemmatizer.lemmatize(word1, pos="v")
+                word3 = wordnet_lemmatizer.lemmatize(word2, pos=("a"))
+                lemma_words.append(word3)
 
-        return lemma_words
+            return lemma_words
 
     @staticmethod
     def text_lemmatization(tokenized_text):

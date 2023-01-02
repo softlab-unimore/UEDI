@@ -87,7 +87,7 @@ def get_binary_classification_effectiveness_report(y_true: list, y_pred: list, f
         'acc': acc
     }
 
-    return  report_data
+    return report_data
 
 
 def get_regression_metric_scores(y_test, y_pred):
